@@ -1,9 +1,9 @@
 function [x,varargout] = blasst(x,lineFrequencies,frequencyRanges,samplingRate,varargin)
-% pop_OCW_LNR(): EEGLAB helper function for OCW line noise removal.
-% Takes as input an EEGLAB EEG struct, along with relevant parameters, and
-% calls OCW_LNR for line noise removal at specied frequencies. For each
-% specified frequency, pop_OCW_LNR iteratively calls OCW_LNR and then uses
-% OCW_Test to test for convergence based on the distributions of
+% blasst(): EEGLAB helper function for OCW line noise removal.
+% Takes as input an array of signals x, along with relevant parameters, and
+% performs BLASST filtering at specified frequencies. For each specified 
+% frequency, blasst() iteratively calls blasst_internal() and then uses
+% blasst_test() to test for convergence based on the distributions of
 % convolution coefficients in the target and surrounding frequency bands.
 %
 % INPUT:
