@@ -6,6 +6,28 @@ function [EEG,com] = pop_blasst(EEG,lineFrequencies,frequencyRanges,varargin)
 % then uses blasst_test() to test for convergence based on the 
 % distributions of convolution coefficients in the target and surrounding 
 % frequency bands.
+%
+% AUTHOR: Kenneth Ball, 2015.
+% 
+% IF YOU FIND BLASST USEFUL IN YOUR WORK, PLEASE CITE:
+%
+% Ball, K. R., Hairston, W. D., Franaszczuk, P. J., Robbins, K. A., 
+% BLASST: Band Limited Atomic Sampling with Spectral Tuning with 
+% Applications to Utility Line Noise Filtering, [Under Review].
+%
+% Copyright 2015 Kenneth Ball
+% 
+% Licensed under the Apache License, Version 2.0 (the "License");
+% you may not use this file except in compliance with the License.
+% You may obtain a copy of the License at
+% 
+%     http://www.apache.org/licenses/LICENSE-2.0
+% 
+% Unless required by applicable law or agreed to in writing, software
+% distributed under the License is distributed on an "AS IS" BASIS,
+% WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+% See the License for the specific language governing permissions and
+% limitations under the License.
 
 com = '';
 
