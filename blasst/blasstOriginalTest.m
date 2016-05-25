@@ -1,4 +1,4 @@
-function [BDist,maxFlag,varargout] = blasst_test(x,f,r,sR,scale)
+function [BDist,maxFlag,varargout] = blasstOriginalTest(x,f,r,sR,scale)
 % blasst_test(): Tests for convergence of the BLASST line noise removal
 % approach by comparing the Bhattahcharya distance between the target and
 % test frequency bands.
@@ -100,6 +100,14 @@ varargout{1}.CCompare = CCompare;
 varargout{1}.DCompare = DCompare;
 varargout{1}.centers = centers;
 
+figure('Name', 'Plot comparison')
+hold on
+plot(centers, DCompare, 'k-');
+plot(centers, CCompare, 'r-');
+hold off
+xlabel('Power')
+ylabel('Probability')
+legend('Predicted', 'Current')
 
 end
 

@@ -1,4 +1,4 @@
-function [y,x] = blasst_internal(x,f,r,sR,scale,rez,manualOffset)
+function [y,x] = blasstOriginalInternal(x,f,r,sR,scale,rez,manualOffset)
 % blasst_internal(): An iteration of BLASST feature fitting.
 % Takes a 1-dimensional signal and fits a series of Gabor atoms (arranged
 % so that the enveloping Gaussian functions add up to a partition of unity)

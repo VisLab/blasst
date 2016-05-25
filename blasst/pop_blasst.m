@@ -55,8 +55,11 @@ elseif isempty(EEG.srate)
     error('BLASST must have a sampling rate! EEG.srate is empty.')
 end
 
-EEG.data = blasst(EEG.data,lineFrequencies,frequencyRanges,EEG.srate,varargin);
-foo = [];
+for k = 1:size(EEG.data, 2)
+   EEG.data(k, :) = blasst(EEG.data(k,:), lineFrequencies(k), ...
+                          frequencyRanges(k), EEG.srate, varargin);
+end
+   foo = [];
 % Process varargin cell into string of name value pairs.
 if ~isempty(varargin)
     if ~rem(length(varargin),2)
